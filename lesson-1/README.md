@@ -4,7 +4,7 @@
 
 1. ✅ Create the application via create-react-app when using React version 17-. For the latest version, you can use the current methods and tools.
 2. ✅ Create a class component. Implement a form with an input and a button in it. Add state and practice changing it via this.setState()
-3. Implement all lifecycle methods. Add console.log to them to see when they will be called.
+3. ✅ Implement all lifecycle methods. Add console.log to them to see when they will be called.
 4. ✅ You can add a child component. Practice throwing different types of props into it.
 
 ---
@@ -38,5 +38,5 @@ Your app is ready to be deployed!
 
 1. ✅ Создайте каркас приложения через create-react-app при использовании версии React 17-. Для последних версий можно использовать актуальные способы и инструменты.
 2. ✅ Создайте классовый компонент. В нем реализуйте форму с инпутом и кнопкой. Добавьте state и потренируйтесь его изменять через this.setState()
-3. Реализуйте все методы жизненного цикла. Добавьте в них console.log, чтобы увидеть когда они будут вызываться.
+3. ✅ Реализуйте все методы жизненного цикла. Добавьте в них console.log, чтобы увидеть когда они будут вызываться.
 4. ✅ Можете добавить дочерний компонент. Потренируйтесь с прокидыванием в него пропсов разного типа.
