@@ -1,6 +1,8 @@
 import { Component, ReactNode } from 'react';
+
 import { FormProps, FormStates } from './Form.types';
 import styles from './Form.module.scss';
+import { Button } from '../Button';
 
 export class Form extends Component<FormProps, FormStates> {
   constructor(props: FormProps) {
@@ -41,12 +43,13 @@ export class Form extends Component<FormProps, FormStates> {
           value={this.state.value}
           placeholder={this.props.placeholder}
           onChange={this.handleInputChange}
+          ref={this.props.innerInputRef}
         />
-        <button
-          type='submit'
-          disabled={this.state.isSubmitBtnDisabled}>
-          {this.props.btnText}
-        </button>
+        <Button
+          btnType='submit'
+          btnText={this.props.btnText}
+          isBtnDisabled={this.state.isSubmitBtnDisabled}
+        />
       </form>
     );
   }

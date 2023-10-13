@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import { Form } from './components';
+import { Component, createRef } from 'react';
+import { Button, Form } from './components';
 import styles from './App.module.scss';
 
 interface AppProps {}
@@ -8,11 +8,14 @@ interface AppStates {
 }
 
 class App extends Component<AppProps, AppStates> {
+  inputRef;
+
   constructor(props: AppProps) {
     super(props);
     this.state = {
       title: 'Title',
     };
+    this.inputRef = createRef<HTMLInputElement>();
   }
 
   static getDerivedStateFromProps(
@@ -67,6 +70,10 @@ class App extends Component<AppProps, AppStates> {
     });
   };
 
+  focusOnInput = () => {
+    this.inputRef.current?.focus();
+  };
+
   render() {
     return (
       <>
@@ -79,6 +86,13 @@ class App extends Component<AppProps, AppStates> {
               inputName='text'
               formName='title-change'
               onSubmit={this.handleTitleChange}
+              innerInputRef={this.inputRef}
+            />
+            <Button
+              btnType='button'
+              btnText='Focus on input'
+              isBtnDisabled={false}
+              onClick={this.focusOnInput}
             />
           </section>
         </main>
