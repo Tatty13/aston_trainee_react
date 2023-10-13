@@ -8,4 +8,5 @@ export interface FormProps {
 
 export interface FormStates {
   value: string;
+  isSubmitBtnDisabled: boolean;
 }

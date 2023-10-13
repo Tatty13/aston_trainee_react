@@ -7,12 +7,20 @@ export class Form extends Component<FormProps, FormStates> {
     super(props);
     this.state = {
       value: '',
+      isSubmitBtnDisabled: false,
     };
   }
 
+  getSubmitBtnState = (inputValue: string) => {
+    return inputValue.toLowerCase().includes('реакт');
+  };
+
   handleInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = evt.target.value;
+
     this.setState({
-      value: evt.target.value,
+      value: newValue,
+      isSubmitBtnDisabled: this.getSubmitBtnState(newValue),
     });
   };
 
@@ -34,7 +42,11 @@ export class Form extends Component<FormProps, FormStates> {
           placeholder={this.props.placeholder}
           onChange={this.handleInputChange}
         />
-        <button type='submit'>{this.props.btnText}</button>
+        <button
+          type='submit'
+          disabled={this.state.isSubmitBtnDisabled}>
+          {this.props.btnText}
+        </button>
       </form>
     );
   }

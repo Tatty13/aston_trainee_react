@@ -11,10 +11,14 @@
 
 ## Lesson 2️⃣. Task
 
-1. In the previously created class component you need to add a check if the input text contains the word "реакт". As soon as the word реакт is entered into the text input, you need to disable the form submit button. If you start to modify the entered string so that it no longer contains the word "реакт", you need to un-disable the submit button.
+1. ✅ In the previously created class component you need to add a check if the input text contains the word `реакт`*. As soon as the word `реакт` is entered into the text input, you need to disable the form submit button. If you start to modify the entered string so that it no longer contains the word `реакт`, you need to un-disable the submit button.
 2. Add another button that, when clicked, the focus will be set to the input.
 3. Create a functional component and render a list, add keys to it.
 4. Practice with React.Fragment and its shorthand.
+
+*_case insensitive search is implemented_
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -50,7 +54,9 @@ Your app is ready to be deployed!
 
 ## Занятие 2️⃣. Задание
 
-1. В ранее созданный классовый компонент нужно добавить проверку на содержимое в тексте инпута слова "реакт". Как только в процессе ввода в инпут текста будет введено слово "реакт", нужно задизейблить кнопку отправки формы. Если начать изменять введенную строку так, что в ней больше не будет слова "реакт", то нужно раздизейблить кнопку сабмита формы.
+1. ✅ В ранее созданный классовый компонент нужно добавить проверку на содержимое в тексте инпута слова `реакт`*. Как только в процессе ввода в инпут текста будет введено слово `реакт`, нужно задизейблить кнопку отправки формы. Если начать изменять введенную строку так, что в ней больше не будет слова `реакт`, то нужно раздизейблить кнопку сабмита формы.
 2. Добавьте еще одну кнопку, по нажатию на которую фокус будет выставляться в инпут.
 3. Создайте функциональный компонент и отрисуйте список, добавьте к нему ключи.
 4. Потренируйтесь с React.Fragment и его сокращенной формой записи.
+
+*поиск реализован без учета регистра

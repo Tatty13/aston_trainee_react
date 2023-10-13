@@ -43,6 +43,7 @@
     background: rgb(var(--brand-rgb));
     border: none;
     border-radius: 50%;
+    cursor: pointer;
     transition: 0.3s ease-in-out;
 
     &:hover {
@@ -51,6 +52,13 @@
 
     &:active {
       transform: scale(0.99);
+    }
+
+    &:disabled {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.5;
+      color: inherit;
     }
   }
 }
