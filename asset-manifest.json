@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aston_trainee_react/static/css/main.51b6100a.css",
+    "main.js": "/aston_trainee_react/static/js/main.74c8fbd7.js",
+    "index.html": "/aston_trainee_react/index.html",
+    "main.51b6100a.css.map": "/aston_trainee_react/static/css/main.51b6100a.css.map",
+    "main.74c8fbd7.js.map": "/aston_trainee_react/static/js/main.74c8fbd7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51b6100a.css",
+    "static/js/main.74c8fbd7.js"
+  ]
+}
