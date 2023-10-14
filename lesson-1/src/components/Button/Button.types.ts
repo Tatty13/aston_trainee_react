@@ -1,6 +1,7 @@
 export interface ButtonProps {
-  isBtnDisabled: boolean;
-  btnText: string;
   btnType: 'button' | 'submit' | 'reset';
+  btnText?: string;
+  isBtnDisabled?: boolean;
+  variant?: 'check' | 'delete' | 'text';
   onClick?: (evt: React.MouseEvent<HTMLButtonElement>) => void;
 }

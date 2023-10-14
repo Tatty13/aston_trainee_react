@@ -1,0 +1,77 @@
+$gap: 1rem;
+
+.list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  gap: $gap;
+  flex-wrap: wrap;
+}
+
+.list__item {
+  position: relative;
+  box-sizing: border-box;
+  padding: 1rem 0.5rem 1rem 1rem;
+  width: calc(#{25%} - #{$gap} + #{$gap / 4});
+  min-height: 5rem;
+  display: flex;
+  gap: 0.5rem;
+  background: rgb(var(--card-background-rgb));
+  list-style: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+
+  @media (max-width: 998px) {
+    width: calc(#{50%} - #{$gap / 2});
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+    flex-grow: 1;
+    display: box;
+    display: -webkit-box;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    line-clamp: 3;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+  }
+
+  &::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: calc(#{100%} + #{4px});
+    height: calc(#{100%} + #{4px});
+    top: -2px;
+    left: -2px;
+    background: var(--text-gradient);
+    border-radius: var(--border-radius);
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 998px) {
+}
