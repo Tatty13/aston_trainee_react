@@ -1,18 +1,28 @@
 import { Component, ReactNode } from 'react';
+
 import { FormProps, FormStates } from './Form.types';
 import styles from './Form.module.scss';
+import { Button } from '../Button';
 
 export class Form extends Component<FormProps, FormStates> {
   constructor(props: FormProps) {
     super(props);
     this.state = {
       value: '',
+      isSubmitBtnDisabled: false,
     };
   }
 
+  getSubmitBtnState = (inputValue: string) => {
+    return inputValue.toLowerCase().includes('реакт');
+  };
+
   handleInputChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = evt.target.value;
+
     this.setState({
-      value: evt.target.value,
+      value: newValue,
+      isSubmitBtnDisabled: this.getSubmitBtnState(newValue),
     });
   };
 
@@ -33,8 +43,13 @@ export class Form extends Component<FormProps, FormStates> {
           value={this.state.value}
           placeholder={this.props.placeholder}
           onChange={this.handleInputChange}
+          ref={this.props.innerInputRef}
         />
-        <button type='submit'>{this.props.btnText}</button>
+        <Button
+          btnType='submit'
+          btnText={this.props.btnText}
+          isBtnDisabled={this.state.isSubmitBtnDisabled}
+        />
       </form>
     );
   }

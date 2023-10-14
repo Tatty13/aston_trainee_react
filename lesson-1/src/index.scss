@@ -5,6 +5,7 @@
   --font-rgb: 14 42 58;
   --background-start-rgb: 255 255 255;
   --background-end-rgb: 142 211 254;
+  --card-background-rgb: 232 246 255;
 
   --brand-rgb: 30 190 221;
   --brand-secondary-rgb: 23 157 66;
@@ -23,6 +24,7 @@
     --font-rgb: 210 209 203;
     --background-start-rgb: 13 13 13;
     --background-end-rgb: 40 50 113;
+    --card-background-rgb: 21 25 45;
 
     --brand-rgb: 20 136 159;
     --brand-secondary-rgb: 118 211 148;
@@ -74,9 +76,6 @@ a {
     color-scheme: dark;
   }
 }
-
-// @media (min-width: 701px) and (max-width: 1280px) {
-// }
 
 @media (max-width: 700px) {
   html {
