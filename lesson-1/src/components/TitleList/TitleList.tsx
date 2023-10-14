@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 
 import { TitleListProps } from './TitleList.types';
 import styles from './TitleList.module.scss';
-import { Button } from '../Button';
+import { TitleCard } from '../TitleCard';
 
 export const TitleList: FC<TitleListProps> = ({
   titles,
@@ -10,23 +10,14 @@ export const TitleList: FC<TitleListProps> = ({
   onDelete,
 }) => {
   const list = titles.map(({ text, id }) => (
-    <li
-      key={id}
-      className={styles.list__item}>
-      <p>{text}</p>
-      <div className={styles.controls}>
-        <Button
-          btnType='button'
-          variant='check'
-          onClick={onCheck}
-        />
-        <Button
-          btnType='button'
-          variant='delete'
-          onClick={onDelete}
-        />
-      </div>
-    </li>
+    <Fragment key={id}>
+      <TitleCard
+        text={text}
+        onCheck={onCheck}
+        onDelete={onDelete}
+      />
+      <div className={styles.testFragment} />
+    </Fragment>
   ));
 
   return list.length ? (

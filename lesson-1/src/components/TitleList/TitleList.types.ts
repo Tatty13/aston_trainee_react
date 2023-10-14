@@ -5,6 +5,6 @@ export interface Item {
 
 export interface TitleListProps {
   titles: Item[];
-  onCheck?: (evt: React.MouseEvent<HTMLButtonElement>) => void;
-  onDelete?: (evt: React.MouseEvent<HTMLButtonElement>) => void;
+  onCheck: (evt: React.MouseEvent<HTMLButtonElement>) => void;
+  onDelete: (evt: React.MouseEvent<HTMLButtonElement>) => void;
 }
